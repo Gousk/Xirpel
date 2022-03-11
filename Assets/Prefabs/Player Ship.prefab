@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1488383377681470212}
   - component: {fileID: 568639297929803717}
+  - component: {fileID: 2670620313380248780}
+  - component: {fileID: 3110153116140654621}
+  - component: {fileID: 7551333603542063953}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Untagged
@@ -63,9 +66,51 @@ MonoBehaviour:
   yRange: 5
   lasers: []
   positionPitchFactor: -2
-  controlPitchFactor: -15
   positionYawFactor: 2
+  controlPitchFactor: -15
   controlRollFactor: -20
+--- !u!114 &2670620313380248780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221321176192428962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b9681221f2cd04b9e4597244d7b4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadDelay: 1
+--- !u!54 &3110153116140654621
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221321176192428962}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7551333603542063953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221321176192428962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.46, y: 2.7, z: 12.46}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &212232595038550381
 PrefabInstance:
   m_ObjectHideFlags: 0
