@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3200836327345539235}
+  - component: {fileID: 2738596182310171159}
   - component: {fileID: 3200836327345539236}
   - component: {fileID: 3200836327345539237}
   m_Layer: 0
-  m_Name: Explosion VFX
+  m_Name: Hit Explosion VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,12 +27,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3200836327345539238}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 215.25, y: 35.75, z: 121.58}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &2738596182310171159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200836327345539238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc7fa5c3d35f4a40b36b74d912bd83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &3200836327345539236
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -39,8 +52,8 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3200836327345539238}
-  serializedVersion: 6
-  lengthInSec: 0.5
+  serializedVersion: 7
+  lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -115,8 +128,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.3
-      minScalar: 0.2
+      scalar: 0.2
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -168,7 +181,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 70
+      scalar: 40
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -225,11 +238,11 @@ ParticleSystem:
       maxColor: {r: 0, g: 0.5283019, b: 0.4470546, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0.745283, b: 0.67880857, a: 1}
-        key1: {r: 0.3622641, g: 1, b: 0.95444334, a: 1}
-        key2: {r: 0, g: 0.52575725, b: 0.6132076, a: 1}
-        key3: {r: 0.5226415, g: 0.9627191, b: 1, a: 0}
-        key4: {r: 0.22677107, g: 0.49519053, b: 0.6603774, a: 0}
+        key0: {r: 0.74509805, g: 0.08245065, b: 0, a: 1}
+        key1: {r: 1, g: 0.67214376, b: 0, a: 1}
+        key2: {r: 0.6117647, g: 0.08960068, b: 0, a: 1}
+        key3: {r: 1, g: 0.96748906, b: 0.52156866, a: 0}
+        key4: {r: 1, g: 0.23047763, b: 0, a: 0}
         key5: {r: 0, g: 0.31986684, b: 0.6226415, a: 0}
         key6: {r: 0, g: 0.31986684, b: 0.6226415, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
@@ -284,7 +297,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3611,19 +3624,20 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 3
+    serializedVersion: 4
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
-    plane1: {fileID: 0}
-    plane2: {fileID: 0}
-    plane3: {fileID: 0}
-    plane4: {fileID: 0}
-    plane5: {fileID: 0}
+    m_Planes:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -3797,17 +3811,20 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 0
-    collisionShape0: {fileID: 0}
-    collisionShape1: {fileID: 0}
-    collisionShape2: {fileID: 0}
-    collisionShape3: {fileID: 0}
-    collisionShape4: {fileID: 0}
-    collisionShape5: {fileID: 0}
+    serializedVersion: 2
     inside: 1
     outside: 0
     enter: 0
     exit: 0
+    colliderQueryMode: 0
     radiusScale: 1
+    primitives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
