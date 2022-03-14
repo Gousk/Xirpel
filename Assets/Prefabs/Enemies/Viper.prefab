@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 2986737237015300924}
   - component: {fileID: 2978938274481049464}
   - component: {fileID: 6507266541783967784}
+  - component: {fileID: 5941734565748634335}
   m_Layer: 0
   m_Name: Viper
   m_TagString: Untagged
@@ -512,7 +513,7 @@ Transform:
   m_GameObject: {fileID: 2955214264773345866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -28.149185, y: 1.3914514, z: -19.7}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4.804, y: 4.804, z: 4.804}
   m_Children:
   - {fileID: 6632631724068366766}
   m_Father: {fileID: 0}
@@ -583,7 +584,19 @@ MonoBehaviour:
   healthPoint: 10
   deathVFX: {fileID: 3200836327345539238, guid: caa13a4dc58de1e4cbc9f935bfd740f1, type: 3}
   hitVFX: {fileID: 3200836327345539238, guid: a4d82dca5c213cb419eb788efbfdb085, type: 3}
-  parent: {fileID: 0}
+--- !u!65 &5941734565748634335
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955214264773345866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.115112, y: 2.782871, z: 10.850532}
+  m_Center: {x: 0, y: -0.000013887881, z: 0.0000026226041}
 --- !u!1 &3285505589661371213
 GameObject:
   m_ObjectHideFlags: 0

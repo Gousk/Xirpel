@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4889076547100212}
   - component: {fileID: 33413632727765270}
   - component: {fileID: 23496527303668514}
+  - component: {fileID: 1179528087384216378}
   m_Layer: 0
   m_Name: StarSparrow10
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1641971311212662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.0164, y: 2.0164, z: 2.0164}
   m_Children:
   - {fileID: 465015774684110104}
   m_Father: {fileID: 0}
@@ -56,6 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,6 +82,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1179528087384216378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641971311212662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad601f155011c64089f02f24cc16e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePerHit: 20
+  healthPoint: 6
+  deathVFX: {fileID: 3200836327345539238, guid: caa13a4dc58de1e4cbc9f935bfd740f1, type: 3}
+  hitVFX: {fileID: 3200836327345539238, guid: a4d82dca5c213cb419eb788efbfdb085, type: 3}
+  parent: {fileID: 0}
 --- !u!1 &346700972243676416
 GameObject:
   m_ObjectHideFlags: 0
