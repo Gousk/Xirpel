@@ -1,1 +1,1 @@
-Learning project
+Unity Learning Project
